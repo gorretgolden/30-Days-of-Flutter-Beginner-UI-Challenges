@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:thirty_days_beginner_ui_basics/day1.dart';
+import 'package:thirty_days_beginner_ui_basics/day2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HorizontalListViewBuilder()
+      home: const VerticalListViewBuilder()
     );
   }
 }
