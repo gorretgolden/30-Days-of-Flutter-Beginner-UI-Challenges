@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:thirty_days_beginner_ui_basics/day1.dart';
 import 'package:thirty_days_beginner_ui_basics/day2.dart';
 import 'package:thirty_days_beginner_ui_basics/day3.dart';
+import 'package:thirty_days_beginner_ui_basics/day4.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,10 +19,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
        
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
         useMaterial3: true,
       ),
-      home: const GridViewGallery()
+      home: const LoginPage()
     );
   }
 }
