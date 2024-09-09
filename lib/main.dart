@@ -6,6 +6,7 @@ import 'package:thirty_days_beginner_ui_basics/day3.dart';
 import 'package:thirty_days_beginner_ui_basics/day4.dart';
 import 'package:thirty_days_beginner_ui_basics/day5.dart';
 import 'package:thirty_days_beginner_ui_basics/day6.dart';
+import 'package:thirty_days_beginner_ui_basics/day7.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
         useMaterial3: true,
       ),
-      home: const RegistrationPage()
+      home: const ValidatedRegistrationPage()
     );
   }
 }
