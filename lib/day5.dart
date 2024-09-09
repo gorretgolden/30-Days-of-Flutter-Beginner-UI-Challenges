@@ -1,4 +1,7 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:thirty_days_beginner_ui_basics/day6.dart';
 
 class ValidatedLoginPage extends StatefulWidget {
   const ValidatedLoginPage({super.key});
@@ -11,9 +14,29 @@ class _ValidatedLoginPageState extends State<ValidatedLoginPage> {
   //form key to main form state
   final _formKey = GlobalKey<FormState>();
   //text editing form field controllers to get field text
-  final _email_address_controller = TextEditingController();
-  final _password_controller = TextEditingController();
+  final _emailAddressController = TextEditingController();
+  final _passwordController= TextEditingController();
   bool _isObSecure = true;
+
+//ontap detector for textspan in rich text
+  late TapGestureRecognizer _tapGestureRecognizer;
+
+   @override
+  void initState() {
+    super.initState();
+    _tapGestureRecognizer = TapGestureRecognizer()
+      ..onTap = _handleOntap;
+  }
+
+  @override
+  void dispose() {
+    _tapGestureRecognizer.dispose();
+    super.dispose();
+  }
+
+  void _handleOntap() {
+    Get.to(const RegistrationPage());
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +63,7 @@ class _ValidatedLoginPageState extends State<ValidatedLoginPage> {
                 children: [
                   //Email address text form field
                   TextFormField(
-                    controller: _email_address_controller,
+                    controller: _emailAddressController,
                     //adding auto validation
                     autovalidateMode: AutovalidateMode.onUserInteraction,
                     decoration:  InputDecoration(
@@ -70,7 +93,7 @@ class _ValidatedLoginPageState extends State<ValidatedLoginPage> {
                       const SizedBox(height:30.0),
                   //Password form field
                   TextFormField(
-                    controller: _password_controller,
+                    controller: _passwordController,
                     //adding obsecurity 
                     obscureText: _isObSecure,
                       //adding auto validation
@@ -134,7 +157,24 @@ class _ValidatedLoginPageState extends State<ValidatedLoginPage> {
                         ),),
                       ),
                     ),
-                  )
+                  ),
+                     const SizedBox(height: 18.0),
+                   //Adding register text
+                    RichText(
+                        text: TextSpan(
+                            text: "Don't have an account ? ",
+                             style: const TextStyle(color:Colors.black),
+                            children: [
+                          TextSpan(
+                              text: "Register here",
+                              style: const TextStyle(color: Colors.orange),
+                              //adding gesture detection on login here text
+                              recognizer: _tapGestureRecognizer
+                              
+                              ),
+                              
+                        ])),
+                         const SizedBox(height: 18.0),
 
                 ],
               ))

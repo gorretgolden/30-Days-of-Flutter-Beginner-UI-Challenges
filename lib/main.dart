@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:thirty_days_beginner_ui_basics/day1.dart';
 import 'package:thirty_days_beginner_ui_basics/day2.dart';
 import 'package:thirty_days_beginner_ui_basics/day3.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: '30 Days Beginner UI Basics',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(

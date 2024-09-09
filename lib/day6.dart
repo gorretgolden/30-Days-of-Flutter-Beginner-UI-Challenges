@@ -1,4 +1,7 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:thirty_days_beginner_ui_basics/day5.dart';
 
 class RegistrationPage extends StatefulWidget {
   const RegistrationPage({super.key});
@@ -16,6 +19,25 @@ class _RegistrationPageState extends State<RegistrationPage> {
   final _phoneNumberController = TextEditingController();
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
+  //ontap detector for textspan in rich text
+  late TapGestureRecognizer _tapGestureRecognizer;
+
+  @override
+  void initState() {
+    super.initState();
+    _tapGestureRecognizer = TapGestureRecognizer()..onTap = _handleOntap;
+  }
+
+  @override
+  void dispose() {
+    _tapGestureRecognizer.dispose();
+    super.dispose();
+  }
+
+  void _handleOntap() {
+    Get.to(const ValidatedLoginPage());
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,7 +111,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     const SizedBox(height: 30.0),
                     //Password form field
                     TextFormField(
-                      controller: _confirmPasswordController,
+                      controller: _passwordController,
                       obscureText: _isObsecure,
                       decoration: InputDecoration(
                           border: const OutlineInputBorder(),
@@ -113,6 +135,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     const SizedBox(height: 30.0),
                     //Confirm Password form field
                     TextFormField(
+                      controller: _confirmPasswordController,
                       obscureText: _isObsecure,
                       decoration: InputDecoration(
                           border: const OutlineInputBorder(),
@@ -154,7 +177,21 @@ class _RegistrationPageState extends State<RegistrationPage> {
                           ),
                         ),
                       ),
-                    )
+                    ),
+                    const SizedBox(height: 18.0),
+                    //Adding login text
+                    RichText(
+                        text: TextSpan(
+                            text: "Already have an account ? ",
+                            style: const TextStyle(color: Colors.black),
+                            children: [
+                          TextSpan(
+                              text: "Login here",
+                              style: const TextStyle(color: Colors.orange),
+                              //adding gesture detection on login here text
+                              recognizer: _tapGestureRecognizer),
+                        ])),
+                    const SizedBox(height: 18.0),
                   ],
                 ))
               ],
