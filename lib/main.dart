@@ -9,6 +9,7 @@ import 'package:thirty_days_beginner_ui_basics/day6.dart';
 import 'package:thirty_days_beginner_ui_basics/day7.dart';
 import 'package:thirty_days_beginner_ui_basics/day8.dart';
 import 'package:thirty_days_beginner_ui_basics/day9.dart';
+import 'package:thirty_days_beginner_ui_basics/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
         useMaterial3: true,
       ),
-      home: const ContactListWithUserImage()
+      home: const HomeScreen()
     );
   }
 }
