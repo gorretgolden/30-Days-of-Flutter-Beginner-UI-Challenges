@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:thirty_days_beginner_ui_basics/day12.dart';
 import 'package:thirty_days_beginner_ui_basics/day13.dart';
+import 'package:thirty_days_beginner_ui_basics/day14.dart';
 
 
 void main() {
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
           seedColor: Colors.black),
         useMaterial3: true,
       ),
-      home: const ProductsScreenUsingLists()
+      home: const ProductsScreenUsingModels()
     );
   }
 }

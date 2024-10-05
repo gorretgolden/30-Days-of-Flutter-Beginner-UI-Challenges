@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:thirty_days_beginner_ui_basics/models/product_model.dart';
 
 class ProductCard extends StatelessWidget {
-  final Map<String,dynamic> product;
+  // final Map<String,dynamic> product;
+  //Using the product model for the products
+  final Product product;
   
   const ProductCard({super.key, required this.product});
 
@@ -25,7 +28,7 @@ class ProductCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children:[
                 Image.network(
-                  product['imagePath'],
+                  product.imagePath, //accessing the product image from the product model  //  product['imagePath'] used for list with a product map/dictionary
                   height: 150,
                   width: double.infinity,
                   fit:BoxFit.cover
@@ -37,7 +40,7 @@ class ProductCard extends StatelessWidget {
                      children:[
                       //Adding a product name
                       Text(
-                        product['name'],
+                        product.name, //  product['name']
                         style:const TextStyle(
                           fontSize:16,
                           fontWeight:FontWeight.bold
@@ -47,7 +50,7 @@ class ProductCard extends StatelessWidget {
                       const SizedBox(height:8),
                       //Adding the product price
                        Text(
-                        "UGX ${product['price']}", //adding ugx with string interpolation
+                        "UGX ${product.price}", //adding ugx with string interpolation //product['price']
                         style: TextStyle(
                           fontSize:17,
                           color:Colors.grey[600],
@@ -58,7 +61,7 @@ class ProductCard extends StatelessWidget {
                         const SizedBox(height:8),
                         //Adding the product rating
                         RatingBarIndicator(
-                          rating:product['rating'],
+                          rating:product.rating, //product['rating']
                           itemBuilder: (context,index) =>
                            const Icon(
                                 Icons.star,
