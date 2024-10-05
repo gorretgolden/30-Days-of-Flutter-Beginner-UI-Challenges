@@ -1,16 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:thirty_days_beginner_ui_basics/day1.dart';
-import 'package:thirty_days_beginner_ui_basics/day10.dart';
-import 'package:thirty_days_beginner_ui_basics/day11.dart';
-import 'package:thirty_days_beginner_ui_basics/day3.dart';
-import 'package:thirty_days_beginner_ui_basics/day4.dart';
-import 'package:thirty_days_beginner_ui_basics/day5.dart';
-import 'package:thirty_days_beginner_ui_basics/day6.dart';
-import 'package:thirty_days_beginner_ui_basics/day7.dart';
-import 'package:thirty_days_beginner_ui_basics/day8.dart';
-import 'package:thirty_days_beginner_ui_basics/day9.dart';
-import 'package:thirty_days_beginner_ui_basics/screens/home_screen.dart';
+import 'package:thirty_days_beginner_ui_basics/day12.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -33,7 +24,7 @@ class MyApp extends StatelessWidget {
           seedColor: Colors.black),
         useMaterial3: true,
       ),
-      home: const OnboardingScreen()
+      home: const VisaCard()
     );
   }
 }
