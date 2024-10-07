@@ -32,6 +32,9 @@ dependencies:
     sdk: flutter
   get: ^4.6.5  
   smooth_page_indicator: ^1.0.0
+  flutter_rating_bar: ^4.0.0
+  
+
 
 
 
