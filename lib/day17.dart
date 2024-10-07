@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:thirty_days_beginner_ui_basics/day15.dart';
+import 'package:thirty_days_beginner_ui_basics/day18.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -83,18 +84,22 @@ class ProfileScreen extends StatelessWidget {
               //Adding a divider
               const Divider(),
               //Adding a notifications option
-              const ListTile(
-                leading: Icon(
+               ListTile(
+                leading: const Icon(
                   Icons.lock,
                   color: Colors.green,
                   size: 28,
                 ),
-                title: Text(
+                //Adding navigation to notifications screen
+                onTap: (){
+                   Get.to(NotificationsScreen());
+                },
+                title: const Text(
                   "Notifications",
                   style: TextStyle(fontSize: 17, fontWeight: FontWeight.w400),
                 ),
                 //Adding a widget (Icon) at the end/right of the listTile
-                trailing: Icon(Icons.arrow_forward_ios),
+                trailing: const Icon(Icons.arrow_forward_ios),
               ),
              const Divider(),
 
