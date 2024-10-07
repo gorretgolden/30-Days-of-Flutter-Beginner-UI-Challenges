@@ -5,6 +5,7 @@ import 'package:thirty_days_beginner_ui_basics/day13.dart';
 import 'package:thirty_days_beginner_ui_basics/day14.dart';
 import 'package:thirty_days_beginner_ui_basics/day15.dart';
 import 'package:thirty_days_beginner_ui_basics/day16.dart';
+import 'package:thirty_days_beginner_ui_basics/day17.dart';
 
 
 void main() {
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
           seedColor: Colors.black),
         useMaterial3: true,
       ),
-      home:  const SettingsScreen()
+      home:  const ProfileScreen()
     );
   }
 }

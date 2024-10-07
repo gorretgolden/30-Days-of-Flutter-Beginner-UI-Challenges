@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:thirty_days_beginner_ui_basics/models/product_model.dart';
 import 'package:thirty_days_beginner_ui_basics/widgets/favourite_card.dart';
 
-class FavouriteProductsScreen extends StatefulWidget {
+class FavoriteProductsScreen extends StatefulWidget {
 
-   FavouriteProductsScreen({super.key});
+   FavoriteProductsScreen({super.key});
 
   @override
-  State<FavouriteProductsScreen> createState() => _FavouriteProductsScreenState();
+  State<FavoriteProductsScreen> createState() => _FavoriteProductsScreenState();
 }
 
-class _FavouriteProductsScreenState extends State<FavouriteProductsScreen> {
+class _FavoriteProductsScreenState extends State<FavoriteProductsScreen> {
   List <Product> favouriteProducts = [
       Product(name: "Hand Bag",price: 50000,rating:4.0,imagePath: 'https://img.freepik.com/free-photo/fashionable-feminine-leather-lady-background_1203-6493.jpg?uid=R46484519&ga=GA1.1.858364278.1724432012&semt=ais_hybrid'),
        Product(name: "Hand Bag",price: 50000,rating:4.0,imagePath: 'https://img.freepik.com/free-photo/fashionable-feminine-leather-lady-background_1203-6493.jpg?uid=R46484519&ga=GA1.1.858364278.1724432012&semt=ais_hybrid'),
@@ -23,10 +23,11 @@ class _FavouriteProductsScreenState extends State<FavouriteProductsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Favourite Products", 
-        style:TextStyle(fontWeight: FontWeight.bold,color: Colors.white)),
+        title: const Text("Favorite Products", 
+        style:TextStyle(fontWeight: FontWeight.bold)),//color: Colors.white
         backgroundColor: Colors.green,
         centerTitle: true,
+        foregroundColor: Colors.white,
         
 
         ),
