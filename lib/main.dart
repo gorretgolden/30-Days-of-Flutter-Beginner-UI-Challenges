@@ -8,6 +8,7 @@ import 'package:thirty_days_beginner_ui_basics/day16.dart';
 import 'package:thirty_days_beginner_ui_basics/day17.dart';
 import 'package:thirty_days_beginner_ui_basics/day18.dart';
 import 'package:thirty_days_beginner_ui_basics/day19.dart';
+import 'package:thirty_days_beginner_ui_basics/day20.dart';
 
 
 void main() {
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
           seedColor: Colors.black),
         useMaterial3: true,
       ),
-      home: ChatsScreen()
+      home: MoviesHomePage()
     );
   }
 }

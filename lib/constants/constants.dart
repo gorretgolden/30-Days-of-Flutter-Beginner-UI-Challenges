@@ -1,5 +1,6 @@
 //list of network images
 import 'package:thirty_days_beginner_ui_basics/models/chat_model.dart';
+import 'package:thirty_days_beginner_ui_basics/models/movie_model.dart';
 
 List<String> imageUrls = [
   'https://img.freepik.com/free-photo/dinner-table-with-foods-soft-drinks-restaurant_114579-3319.jpg?t=st=1725646283~exp=1725649883~hmac=a4f4a60d278381c97d12de7bba9d334687007aa1bed8a9c25916d3475e3920ec&w=1060',
@@ -109,3 +110,45 @@ final List<ChatModel> chats = [
       isRead: true,
       lastMessage: 'The code is working!'),
 ];
+
+//latest movies
+final List<Movie> latestMovies = [
+  Movie(title: 'The Union',
+   imagePath: 'https://media.themoviedb.org/t/p/w440_and_h660_face/d9CTnTHip1RbVi2OQbA2LJJQAGI.jpg', 
+   releaseDate: 'Aug 16, 2024',
+    rating:4.9),
+      Movie(title: 'The Blacklist',
+   imagePath: 'https://media.themoviedb.org/t/p/w440_and_h660_face/r935SMphvXppx5bJjbIBNx02fwc.jpg', 
+   releaseDate: 'Sep 23, 2013',
+    rating:4.3),
+          Movie(title: 'Saving Bikini Bottom: The Sandy Cheeks Movie',
+   imagePath: 'https://media.themoviedb.org/t/p/w440_and_h660_face/30YnfZdMNIV7noWLdvmcJS0cbnQ.jpg', 
+   releaseDate: 'Aug 02, 2024',
+    rating:4.7),
+              Movie(title: 'Jujutsu Kaisen',
+   imagePath: 'https://media.themoviedb.org/t/p/w440_and_h660_face/fHpKWq9ayzSk8nSwqRuaAUemRKh.jpg', 
+   releaseDate: 'Oct 03, 2020',
+    rating:4.5)
+];
+
+
+//recommended movies
+final List<Movie> recommendedMovies = [
+  Movie(title: 'Uri: The Surgical Strike',
+   imagePath: 'https://media.themoviedb.org/t/p/w440_and_h660_face/yNySAgpAnWmPpYinim9E0tUzJWG.jpg', 
+   releaseDate: 'Jan 11, 2019',
+    rating:4.3),
+      Movie(title: 'The Case of the Bloody Iris',
+   imagePath: 'https://media.themoviedb.org/t/p/w440_and_h660_face/afpZ3Eckzo0NyU2SyKbIouoQ3jm.jpg', 
+   releaseDate: 'Aug 04, 1972',
+    rating:4.2),
+          Movie(title: 'Night of the Living Dead',
+   imagePath: 'https://media.themoviedb.org/t/p/w440_and_h660_face/inNUOa9WZGdyRXQlt7eqmHtCttl.jpg', 
+   releaseDate: 'Oct 04, 1968',
+    rating:4.5),
+              Movie(title: 'The Man from Earth : Holocene',
+   imagePath: 'https://media.themoviedb.org/t/p/w440_and_h660_face/krOWstmTUdfafRbXH9YAjVj2zE5.jpg', 
+   releaseDate: 'Oct 13, 2017',
+    rating:4.1)
+];
+
